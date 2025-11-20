@@ -1,10 +1,6 @@
-cat > README.md << 'EOF'
+# 📝 Todo App - Gestor de Tareas
 
-# ✅ Todo App - Gestión Inteligente de Tareas
-
-Una aplicación moderna de gestión de tareas construida con React, React Router y API REST. Diseñada para ayudarte a organizar tu día de manera eficiente y productiva.
-
-![Todo App](https://img.shields.io/badge/React-18.2.0-blue) ![React Router](https://img.shields.io/badge/React_Router-6.8.0-green) ![Vite](https://img.shields.io/badge/Vite-4.1.0-purple)
+Una aplicación moderna de gestión de tareas construida con **React**, **React Router** y **API REST**. Perfecta para organizar tus actividades diarias y aumentar tu productividad.
 
 ## Capturas del Proyecto
 
@@ -12,41 +8,40 @@ Una aplicación moderna de gestión de tareas construida con React, React Router
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 
-## 🚀 Características Principales
+## 🚀 Características Implementadas
 
-### ✅ Funcionalidades Implementadas
+### ✅ Requisitos Principales
 
-- **📱 Navegación SPA** - React Router para navegación fluida entre páginas
-- **➕ Crear Tareas** - Formulario con validación en tiempo real
-- **📋 Listar Tareas** - Vista completa de todas tus actividades
-- **🎯 Gestión de Estado** - Marcar tareas como completadas/pendientes
-- **🗑️ Eliminar Tareas** - Con diálogo de confirmación
-- **✅ Validaciones** - Formularios con validación robusta
-- **⏳ Estados de Carga** - Feedback visual durante operaciones
-- **🚨 Manejo de Errores** - Mensajes amigables y opción de reintento
+- **🏗️ Navegación entre páginas** - React Router configurado
+- **➕ Crear nuevos todos** - Formulario con validación
+- **📋 Listar todos existentes** - Consumo de API REST
+- **✅ Marcar como completado/pendiente** - Toggle funcional
+- **🗑️ Eliminar todos** - Con confirmación de usuario
+- **🔍 Validación básica de formularios** - En tiempo real
+- **⏳ Estados de carga** - Feedback durante peticiones
+- **🚨 Manejo básico de errores** - Try/catch con mensajes
 
 ### 🏆 Retos Completados
 
-- **✏️ Edición Completa** - Modificar tareas existentes con formulario dedicado
-- **🔍 Sistema de Filtros** - Filtrar por estado y prioridad con contadores
+- **✏️ Editar todos** - Formulario completo de edición
+- **🔧 Filtros** - Por estado y prioridad con contadores
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **Frontend:** React 18, React Router DOM 6
-- **Build Tool:** Vite 4
-- **API:** JSON Server (REST API)
-- **Estilos:** CSS3 con variables personalizadas
-- **Gestión de Estado:** React Hooks (useState, useEffect)
-- **Validación:** Sistema personalizado de validaciones
+- **React 18.2.0** - Biblioteca de interfaz de usuario
+- **React Router DOM 6.8.0** - Navegación entre páginas
+- **Vite 4.1.0** - Herramienta de build y desarrollo
+- **JSON Server 0.17.3** - API REST falsa para desarrollo
+- **CSS3** - Estilos con variables personalizadas
 
-## 📦 Instalación y Configuración
+## 📦 Instalación y Ejecución
 
 ### Prerrequisitos
 
-- Node.js 16+
+- Node.js 16 o superior
 - npm o yarn
 
-### Pasos de Instalación
+### Pasos para ejecutar
 
 1. **Clonar el repositorio**
    git clone https://github.com/tu-usuario/todo-app.git
@@ -54,39 +49,36 @@ Una aplicación moderna de gestión de tareas construida con React, React Router
    Instalar dependencias
 
 npm install
-Ejecutar la aplicación
+Ejecutar la aplicación (necesitas dos terminales)
 
-# Terminal 1: Servidor de API
+Terminal 1 - Servidor API:
 
 npm run server
+API disponible en: http://localhost:3001
 
-# Terminal 2: Aplicación React
+Terminal 2 - Aplicación React:
 
 npm run dev
-Abrir en el navegador
+Aplicación disponible en: http://localhost:5173
 
-Aplicación: http://localhost:5173
-
-API: http://localhost:3001/todos
-
-🎮 Uso de la Aplicación
+🎮 Cómo Usar la Aplicación
 Páginas Disponibles
 Página Ruta Descripción
 🏠 Inicio / Página de bienvenida con información
-📝 Mis Tareas /todos Lista completa con filtros y acciones
-➕ Nueva Tarea /add Formulario para crear nuevas tareas
-✏️ Editar Tarea /edit/:id Formulario para modificar tareas existentes
+📝 Mis Tareas /todos Lista completa de tareas con filtros
+➕ Nueva Tarea /add Formulario para crear tareas
+✏️ Editar Tarea /edit/:id Formulario para modificar tareas
 Funcionalidades por Página
 📝 Mis Tareas (/todos)
-Ver lista completa de tareas
+Ver todas las tareas
 
-Estadísticas en tiempo real (total, completadas, pendientes)
+Estadísticas (total, completadas, pendientes)
 
-Filtros por estado (todas/pendientes/completadas)
+Filtros por estado: Todas, Pendientes, Completadas
 
-Filtros por prioridad (alta/media/baja)
+Filtros por prioridad: Alta, Media, Baja
 
-Acciones por tarea (editar, eliminar, toggle completado)
+Acciones: Editar, Eliminar, Marcar completado
 
 ➕ Nueva Tarea (/add)
 Formulario con validación en tiempo real
@@ -102,11 +94,11 @@ Mensajes de error descriptivos
 ✏️ Editar Tarea (/edit/:id)
 Carga automática de datos existentes
 
-Mismo nivel de validación que creación
-
-Información adicional de la tarea
+Modificación de todos los campos
 
 Posibilidad de marcar como completada
+
+Información adicional de la tarea
 
 🗂️ Estructura del Proyecto
 text
@@ -114,7 +106,7 @@ todo-app/
 ├── src/
 │ ├── components/ # Componentes reutilizables
 │ │ ├── Header.jsx # Navegación principal
-│ │ ├── TodoItem.jsx # Item individual de tarea
+│ │ ├── TodoItem.jsx # Item de tarea individual
 │ │ ├── TodoForm.jsx # Formulario reutilizable
 │ │ ├── Filters.jsx # Componente de filtros
 │ │ └── Loading.jsx # Estados de carga
@@ -124,22 +116,23 @@ todo-app/
 │ │ ├── AddTodo.jsx # Crear tarea
 │ │ ├── EditTodo.jsx # Editar tarea
 │ │ └── NotFound.jsx # Página 404
-│ ├── services/ # Lógica de negocio y API
+│ ├── services/ # Lógica de negocio
 │ │ ├── api.js # Servicios de API REST
 │ │ └── validation.js # Sistema de validaciones
 │ ├── hooks/ # Hooks personalizados
-│ │ ├── useTodos.js # Gestión de estado de tareas
+│ │ ├── useTodos.js # Gestión de tareas
 │ │ └── useForm.js # Gestión de formularios
 │ ├── styles/ # Archivos de estilos
-│ │ ├── globals.css # Variables y estilos globales
+│ │ ├── globals.css # Variables globales
 │ │ ├── components.css # Estilos de componentes
 │ │ └── utils.css # Utilidades y páginas
 │ ├── App.jsx # Componente principal
 │ └── main.jsx # Punto de entrada
 ├── db.json # Base de datos JSON
-└── package.json # Dependencias y scripts
-🔧 API Endpoints
-La aplicación consume los siguientes endpoints REST:
+├── package.json # Dependencias del proyecto
+└── README.md # Este archivo
+🔌 API Endpoints
+La aplicación consume una API REST con los siguientes endpoints:
 
 Método Endpoint Descripción
 GET /todos Obtener todas las tareas
@@ -153,71 +146,74 @@ json
 {
 "id": 1,
 "title": "Aprender React Router",
-"description": "Estudiar navegación en aplicaciones SPA",
+"description": "Estudiar navegación en React",
 "completed": false,
 "priority": "high",
 "createdAt": "2024-01-15T10:00:00Z"
 }
-🎨 Personalización
+🎨 Características de UI/UX
 Prioridades
-🔴 Alta - Tareas urgentes y importantes
+🔴 Alta - Tareas urgentes e importantes
 
-🟡 Media - Tareas importantes pero no urgentes
+🟡 Media - Tareas importantes
 
-🟢 Baja - Tareas normales y opcionales
+🟢 Baja - Tareas normales
 
 Estados
-✅ Completada - Tarea finalizada (texto tachado)
+✅ Completada - Texto tachado, opacidad reducida
 
-⏳ Pendiente - Tarea por hacer (estado normal)
+⏳ Pendiente - Estado normal
+
+Validaciones
+Título: Requerido, mínimo 3 caracteres, máximo 100
+
+Descripción: Opcional, máximo 500 caracteres
+
+Prioridad: Selección entre alta, media, baja
 
 📱 Responsive Design
 La aplicación está optimizada para:
 
-💻 Desktop - Experiencia completa con todas las funcionalidades
+💻 Desktop - Experiencia completa
 
-📱 Mobile - Navegación y formularios optimizados
+📱 Mobile - Navegación optimizada
 
 🖥️ Tablet - Layout adaptativo
 
 🚀 Scripts Disponibles
 bash
+npm run dev # Servidor de desarrollo
+npm run server # JSON Server (API)
+npm run build # Build para producción
+npm run preview # Vista previa del build
+📊 Commits Realizados
+feat: creación de estructura inicial con rutas /, /todos y /add
 
-# Desarrollo
+feat: configuración de React Router y componentes base
 
-npm run dev # Inicia servidor de desarrollo
-npm run server # Inicia JSON Server (API)
+feat: componente Todos.jsx con fetch inicial usando useEffect
 
-# Producción
+feat: implementación de listado de todos desde API REST
 
-npm run build # Construye para producción
-npm run preview # Vista previa de build
+feat: formulario para crear nuevos todos con validación básica
 
-# Análisis
+feat: función para marcar todos como completado o pendiente
 
-npm run lint # Análisis de código ESLint
-🤝 Contribución
-Fork el proyecto
+feat: función para eliminar todos del listado con confirmación
 
-Crea una rama para tu feature (git checkout -b feature/AmazingFeature)
+feat: estados de carga y mensajes de espera con useState
 
-Commit tus cambios (git commit -m 'Add some AmazingFeature')
+feat: manejo básico de errores en peticiones con try/catch
 
-Push a la rama (git push origin feature/AmazingFeature)
+refactor: separación de lógica en componentes y limpieza de código
 
-Abre un Pull Request
+feat: implementación completa de edición de todos con formulario
 
-📄 Licencia
-Este proyecto es con fines educativos como parte de la actividad GA1-220501096-03-AA1-EV10.
+feat: sistema de filtros por estado y prioridad implementado
 
 👨‍💻 Autor
-Pablo - GitHub Profile
+Pablo
+Desarrollado como parte de la actividad GA1-220501096-03-AA1-EV10
 
-🙏 Agradecimientos
-React - Biblioteca de JavaScript
-
-React Router - Navegación declarativa
-
-Vite - Herramientas de desarrollo rápido
-
-JSON Server - API REST falsa
+📄 Licencia
+Este proyecto es con fines educativos.
